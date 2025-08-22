@@ -3,20 +3,20 @@ console.log("MOO!");
 //TODO: I need to store my image data
 //you can use images stored locally or remotely
 
-const = images [
-{
-    url: "#",
-    altText: "#",
-},
-{
-    url: "",
-    altText "",
-},
-{
-    url: "",
-    altText "",
-},
-]
+const imagesArray = [
+  {
+    url: "./images/hobbiton-1.jpg",
+    altText: "Looking over the fence at a closed red door into a hobbits home",
+  },
+  {
+    url: "./images/hobbiton-2.jpg",
+    altText: "Looking over the fence at a closed blue door into a hobbits home",
+  },
+  {
+    url: "./images/hobbiton-3.jpg",
+    altText: "Looking up the steps at a closed plain door into a hobbits home",
+  },
+];
 //
 //
 
@@ -41,12 +41,11 @@ const = images [
 
 // we need an event add an event listener to each image - the event handler is the function you wirte to create large images (action to create large images)
 
-
 //TODO: I need to create my large images
 
 //this task is the event handler for the thumbnail events
-function createLargeImages(){ //handler
-
+function createLargeImages() {
+  //handler
 }
 //select the image container
 
