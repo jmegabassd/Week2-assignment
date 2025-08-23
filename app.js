@@ -1,8 +1,5 @@
 console.log("MOO!");
 
-//TODO: I need to store my image data
-//you can use images stored locally or remotely
-
 const imagesArray = [
   {
     url: "./images/hobbiton-1.jpg",
@@ -17,29 +14,22 @@ const imagesArray = [
     altText: "Looking up the steps at a closed plain door into a hobbits home",
   },
 ];
-//
-//
 
 //TODO I need to create my thumbnail images
 
-// function createThumbnails(){
-//}
-
-//select the DOM element (thumbnail container) to contain our thumbnails
-
-//this is a repetitive task - loop - kloop through our array using the length property
-
-// inside our loop we need to do this
-
-// first we need to create the image element
-
-//second we need to update the src and alt attributes of the image element to match those in the array parameters
-
-//give each image a className (img.className)
-
-//last we need to append the created images to the thumbnail-container
-
-// we need an event add an event listener to each image - the event handler is the function you wirte to create large images (action to create large images)
+function createThumbnails() {
+  const thumbnailContainer = document.querySelector("#thumbnail-container");
+  for (let i = 0; i < imagesArray.length; i++) {
+    const thumbnail = document.createElement("img");
+    thumbnail.src = imagesArray[i].url;
+    thumbnail.alt = imagesArray[i].altText;
+    thumbnail.classList.add("thumbnail");
+    thumbnailContainer.appendChild(thumbnail);
+    thumbnail.addEventListener("click", () =>
+      createLargeImages(imagesArray[i])
+    );
+  }
+}
 
 //TODO: I need to create my large images
 
