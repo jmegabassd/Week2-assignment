@@ -5,5 +5,39 @@
 }
 
 body {
-  background-color: coral;
+  width: 100vw;
+  height: 100vh;
 }
+
+#main-image-container {
+  width: 100%;
+  height: 100%;
+}
+
+#main-image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#thumbnail-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#thumbnail-container img {
+  width: 200px;
+  height: auto;
+  padding: 6px;
+}
+
+/* #main-image {
+}
+
+#thumbnail {
+} */
