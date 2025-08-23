@@ -15,8 +15,6 @@ const imagesArray = [
   },
 ];
 
-//TODO I need to create my thumbnail images
-
 function createThumbnails() {
   const thumbnailContainer = document.querySelector("#thumbnail-container");
   for (let i = 0; i < imagesArray.length; i++) {
@@ -31,27 +29,13 @@ function createThumbnails() {
   }
 }
 
-//TODO: I need to create my large images
-
-//this task is the event handler for the thumbnail events
-function createLargeImages() {
-  //handler
+function createLargeImages(imageID) {
+  const mainImageContainer = document.querySelector("#main-image-container");
+  mainImageContainer.innerHTML = null;
+  const mainImage = document.createElement("img");
+  mainImage.src = imageID.url;
+  mainImage.alt = imageID.altText;
+  mainImage.classList.add("main-image");
+  mainImageContainer.appendChild(mainImage);
 }
-//select the image container
-
-//delete the current image in the large image container
-
-//largeImageContainer.innerHTML = null OR ""
-
-//create and image
-
-//update the src and alt values
-
-//add a className for styling
-
-//append image to the container
-
-//no loop needed
-
-//addd this event handler to the thumbnail event
-//you call the createThumbnail function
+createThumbnails();
