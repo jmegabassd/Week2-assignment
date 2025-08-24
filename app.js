@@ -84,8 +84,13 @@ displayFirstImage();
 createThumbnails();
 
 function btnLeft() {
-  const buttonLeft = document.getElementById("#button-left");
+  const buttonLeft = document.querySelector("#button-left");
+  buttonLeft.addEventListener("click", (event) => {
+    console.log(event);
+  });
 }
-function btnRight() {
-  const buttonRight = document.getElementById("#button-right");
-}
+btnLeft();
+
+// function btnRight() {
+//   const buttonRight = document.getElementById("#button-right");
+// }
