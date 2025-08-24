@@ -5,39 +5,25 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 #main-image-container {
-  width: 100%;
-  height: 100%;
-}
-
-#main-image-container img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  background-color: coral;
+  height: 100vh;
+  width: 100vw;
 }
 
 #thumbnail-container {
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
-  background-color: white;
-  border-radius: 5px;
+  background-color: black;
+  z-index: 100;
+  width: 40vw;
+  max-width: 500px;
+  min-width: 250px;
+  height: 150px;
 }
-
-#thumbnail-container img {
-  width: 200px;
-  height: auto;
-  padding: 6px;
-}
-
-/* #main-image {
-}
-
-#thumbnail {
-} */
