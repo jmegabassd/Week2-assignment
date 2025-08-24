@@ -80,17 +80,21 @@ function displayFirstImage() {
   mainImageContainer.appendChild(landingPageImage);
 }
 
-displayFirstImage();
-createThumbnails();
-
 function btnLeft() {
   const buttonLeft = document.querySelector("#button-left");
   buttonLeft.addEventListener("click", (event) => {
     console.log(event);
   });
 }
-btnLeft();
 
-// function btnRight() {
-//   const buttonRight = document.getElementById("#button-right");
-// }
+function btnRight() {
+  const buttonRight = document.querySelector("#button-right");
+  buttonRight.addEventListener("click", (event2) => {
+    console.log(event2);
+  });
+}
+
+displayFirstImage();
+createThumbnails();
+btnLeft();
+btnRight();
