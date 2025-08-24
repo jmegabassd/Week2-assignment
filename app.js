@@ -44,6 +44,8 @@ const imagesArray = [
   },
 ];
 
+let currentIndex = 0;
+
 function createThumbnails() {
   const thumbnailContainer = document.querySelector("#thumbnail-container");
   for (let i = 0; i < imagesArray.length; i++) {
@@ -52,9 +54,10 @@ function createThumbnails() {
     thumbnail.alt = imagesArray[i].altText;
     thumbnail.classList.add("thumbnail");
     thumbnailContainer.appendChild(thumbnail);
-    thumbnail.addEventListener("click", () =>
-      createLargeImages(imagesArray[i])
-    );
+    thumbnail.addEventListener("click", () => {
+      currentIndex = i;
+      createLargeImages(imagesArray[i]);
+    });
   }
 }
 
@@ -80,8 +83,9 @@ function displayFirstImage() {
 displayFirstImage();
 createThumbnails();
 
-// function btnLeft() {
-//   const buttonLeft = document.getElementById("#button-left");
-// }
-
-// const buttonRight = document.getElementById("#button-right");
+function btnLeft() {
+  const buttonLeft = document.getElementById("#button-left");
+}
+function btnRight() {
+  const buttonRight = document.getElementById("#button-right");
+}
