@@ -15,8 +15,8 @@ body {
   overflow: hidden;
 }
 #main-image-container img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -28,10 +28,9 @@ body {
   background-color: rgba(0, 0, 0, 0.65);
   z-index: 100;
   width: 40vw;
-  max-width: 500px;
-  min-width: 250px;
-  height: 150px;
-  border-radius: 10px;
+  max-width: 700px;
+  min-width: 350px;
+  height: 170px;
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
@@ -39,42 +38,28 @@ body {
 
 #thumbnail-container img {
   margin: 5px;
-  background-size: cover;
-  border-radius: 5px;
+  height: 150px;
+  width: auto;
+  padding: 5px;
 }
 .thumbnail:hover {
   opacity: 0.6;
   cursor: pointer;
 }
+
 @media (max-width: 768px) {
   #thumbnail-container {
     top: auto;
     bottom: 2px;
     min-width: 100%;
-    height: 100px;
+    height: 120px;
   }
-}
 
-button {
-  z-index: 10;
-  font-weight: bolder;
-  font-size: large;
-  color: black;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-}
-
-#button-left {
-  position: fixed;
-  top: 11%;
-  left: 300px;
-  border-radius: 50%;
-}
-
-#button-right {
-  position: fixed;
-  top: 11%;
-  right: 300px;
-  border-radius: 50%;
+  #thumbnail-container img {
+    margin: 5px;
+    border-radius: 5px;
+    height: 100px;
+    width: auto;
+    padding: 5px;
+  }
 }

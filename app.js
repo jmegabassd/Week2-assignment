@@ -2,52 +2,52 @@ console.log("MOO!");
 
 const imagesArray = [
   {
-    url: "./images/hobbiton-1.jpg",
+    url: "./images/hobbiton-1.webp",
     altText: "Looking over the fence at a closed red door into a hobbits home.",
   },
   {
-    url: "./images/hobbiton-2.jpg",
+    url: "./images/hobbiton-2.webp",
     altText:
       "Looking over the fence at a closed blue door into a hobbits home.",
   },
   {
-    url: "./images/hobbiton-3.jpg",
+    url: "./images/hobbiton-3.webp",
     altText: "Looking up the steps at a closed plain door into a hobbits home.",
   },
   {
-    url: "./images/hobbiton-4.jpg",
+    url: "./images/hobbiton-4.webp",
     altText: "Looking up over some hobbit homes at the party tree.",
   },
   {
-    url: "./images/hobbiton-5.jpg",
+    url: "./images/hobbiton-5.webp",
     altText: "Looking down a stone paved track leading out of hobbiton.",
   },
   {
-    url: "./images/hobbiton-6.jpg",
+    url: "./images/hobbiton-6.webp",
     altText:
       "Looking over the garden at a hobbit home with a bright blue door.",
   },
   {
-    url: "./images/hobbiton-7.jpg",
+    url: "./images/hobbiton-7.webp",
     altText:
       "A view across hobbiton lake, you can see the tavern and a bridge on the other side of the water ",
   },
   {
-    url: "./images/hobbiton-8.jpg",
+    url: "./images/hobbiton-8.webp",
     altText:
       "Looking through an opened gate through a yellow door into a hobbits home, a guide is describing how the filming is done",
   },
   {
-    url: "./images/hobbiton-9.jpg",
+    url: "./images/hobbiton-9.webp",
     altText:
       "Looking over a fence at a hobbits garden, this is where Bilbo met gandalf who famously said `good morning for an adventure` and initiated their conversation",
   },
 ];
 
-let currentIndex = 0;
+const mainImageContainer = document.querySelector("#main-image-container");
+const thumbnailContainer = document.querySelector("#thumbnail-container");
 
 function createThumbnails() {
-  const thumbnailContainer = document.querySelector("#thumbnail-container");
   for (let i = 0; i < imagesArray.length; i++) {
     const thumbnail = document.createElement("img");
     thumbnail.src = imagesArray[i].url;
@@ -55,14 +55,12 @@ function createThumbnails() {
     thumbnail.classList.add("thumbnail");
     thumbnailContainer.appendChild(thumbnail);
     thumbnail.addEventListener("click", () => {
-      currentIndex = i;
       createLargeImages(imagesArray[i]);
     });
   }
 }
 
 function createLargeImages(image) {
-  const mainImageContainer = document.querySelector("#main-image-container");
   mainImageContainer.innerHTML = null;
   const mainImage = document.createElement("img");
   mainImage.src = image.url;
@@ -72,7 +70,6 @@ function createLargeImages(image) {
 }
 
 function displayFirstImage() {
-  const mainImageContainer = document.querySelector("#main-image-container");
   const landingPageImage = document.createElement("img");
   landingPageImage.src = imagesArray[0].url;
   landingPageImage.alt = imagesArray[0].altText;
@@ -80,21 +77,5 @@ function displayFirstImage() {
   mainImageContainer.appendChild(landingPageImage);
 }
 
-function btnLeft() {
-  const buttonLeft = document.querySelector("#button-left");
-  buttonLeft.addEventListener("click", (event) => {
-    console.log(event);
-  });
-}
-
-function btnRight() {
-  const buttonRight = document.querySelector("#button-right");
-  buttonRight.addEventListener("click", (event2) => {
-    console.log(event2);
-  });
-}
-
 displayFirstImage();
 createThumbnails();
-btnLeft();
-btnRight();
