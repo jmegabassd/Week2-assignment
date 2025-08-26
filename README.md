@@ -22,12 +22,12 @@ Reflection
 
 # What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
 
-[title](https://cssgridgenerator.io/)
-[title](https://grid.layoutit.com/)
-[title](https://getbootstrap.com/docs/4.0/layout/grid/)
-[title](https://google.com/) (too many searches to list)
-[title](https://www.w3schools.com/js/js_events.asp)
-[title]([=>](https://www.w3schools.com/js/js_arrow_function.asp))
+>[title](https://cssgridgenerator.io/)
+>[title](https://grid.layoutit.com/)
+>[title](https://getbootstrap.com/docs/4.0/layout/grid/)
+>[title](https://google.com/) (too many searches to list)
+>[title](https://www.w3schools.com/js/js_events.asp)
+>[title]([=>](https://www.w3schools.com/js/js_arrow_function.asp))
 
 # What errors or bugs did you encounter while completing your assignment? How did you solve them?
 
